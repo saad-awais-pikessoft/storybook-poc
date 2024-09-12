@@ -1,0 +1,76 @@
+/* Sidebar.css */
+
+/* Main container for the sidebar */
+.sidebar {
+    width: 225px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #F3F3F3; /* Dark background color */
+    color: black; /* Light text color */
+    padding: 20px; /* Padding around the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on the right side */
+    display: flex; /* Flexbox to align the content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    position: fixed; /* Fixed positioning */
+    top: 20; /* Start at the top */
+    left: 0; /* Align to the left */
+    overflow-y: auto; /* Enable scrolling for long menus */
+  }
+  
+  /* Styling for the unordered list */
+  .sidebar ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  /* Styling for each list item (menu item) */
+  .sidebar li {
+    margin: 10px 0; /* Space between menu items */
+    padding: 10px 15px; /* Padding inside each menu item */
+    font-size: 18px; /* Font size for the menu items */
+    font-weight: 500; /* Slightly bold font weight */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+  }
+  
+  /* Hover effect for each menu item */
+  .sidebar li:hover {
+    background-color: #1EA7FD; /* Slightly darker background on hover */
+    color: #ffffff; /* White text color on hover */
+    transform: translateX(5px); /* Subtle movement effect on hover */
+  }
+  
+  /* Active or selected menu item (if you want to add active state) */
+  .sidebar li.active {
+    background-color: #1abc9c; /* Highlight color for the active item */
+    color: #ffffff; /* White text color for the active item */
+  }
+  
+  /* Add scrollbar styling (Webkit-based browsers only) */
+  .sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #1abc9c; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+    background: #2c3e50; /* Track color matches the sidebar */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Narrower sidebar on smaller screens */
+      padding: 15px; /* Adjusted padding */
+    }
+  
+    .sidebar li {
+      font-size: 16px; /* Slightly smaller font size */
+    }
+  }
+  
