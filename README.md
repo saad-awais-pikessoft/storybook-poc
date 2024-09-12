@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Storybook POC
+
+## Overview
+
+This project showcases a Proof of Concept (POC) for using [Storybook](https://storybook.js.org/) with our UI components. Storybook is an open-source tool for developing and testing UI components in isolation, providing a dedicated environment for building and iterating on components.
+
+The deployed Storybook application demonstrates the development of **4 different components** and their integration into a **Home Page component**. This POC is designed to illustrate how Storybook can be used to build, test, and document UI components.
+
+## Deployed Application
+
+You can view the deployed Storybook application at:
+
+🔗 **[Storybook POC - View Here](https://storybook-saad-poc.vercel.app/)** 🔗
+
+## Features
+
+- **Component Isolation**: Develop and test UI components independently from the main application.
+- **Enhanced Documentation**: Automatically generated documentation with component descriptions, usage examples, and various states.
+- **Visual Testing**: Interactive visual testing to catch regressions and inconsistencies early.
+- **Design Systems**: Create and maintain a library of reusable components to ensure consistency across the application.
+- **Interactive UI Development**: Test and refine component behavior in a live environment.
+- **Integration with Testing Tools**: Compatibility with testing tools like Jest and Chromatic for automated testing.
+
+## Components
+
+The following components are included in this POC:
+
+1. **Component 1**: Button - It contains for different states of the button. You can pass on the background color, size, disabled as a boolean ,label and the variant as a prop. It also receives the onClick event as a prop.
+
+2. **Component 2**: Header - It contains the header of the page. It has a logo on the left side and a Welcome {username} on the right side with a Login, Logout and Sign up button. The documentation contains 2 states for the header. One with the username logged in and other as a logged out state.
+
+3. **Component 3**: Page - It contains the page of the application that has the content of the page.
+
+4. **Component 4**: Sidebar - It contains the sidebar of the page. It has 2 states as well. One that demonstrates the sidebar with the long list of menu items and the other one being empty. It received the list of menu and the onClick event, that logs the menu item clicked, as a prop.
+
+### Home Page Component
+
+The **Home Page component** integrates the above components to demonstrate their usage together on a single page.
 
 ## Getting Started
 
-First, run the development server:
+To run Storybook locally:
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/saad-awais-pikessoft/storybook-poc.git
+   cd your-repository
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the Storybook Server**
+
+   ```bash
+   npm run storybook
+   ```
+
+   Storybook will start on http://localhost:6006 by default.
+
+## Building Storybook
+
+To build the static files for deployment:
+
+
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build-storybook
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will create a static build of the Storybook application in the `storybook-static` directory.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to contribute to this project by submitting issues or pull requests. For any questions or feedback or to request a demo, please reach out to the [author](https://github.com/saad-awais-pikessoft)
