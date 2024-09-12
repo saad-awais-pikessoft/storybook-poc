@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "postbuild-storybook": "rm -rf public && mv storybook-static public"
+    "build-storybook": "storybook build"
 
   },
   "dependencies": {
